@@ -8,9 +8,9 @@ Informace ve světě kolem nás se často přirozeně vyskytují v nestrukturova
 
 Přestože nestrukturovaných dat je v našem světě mnohem více, pro statistika jsou data strukturovaná důležitější, protože většina statistických metod je navržena právě pro ně. Lidským úsilím lze naštěstí velkou část nestrukturovaných dat na data strukturovaná převést. Zcela jednoduše můžeme vytvořit např. tabulku na základě fotografie obsahu skříně, kde je každý kus oblečení řádkem a jeho druh, barva a velikost sloupci. S moderní technologií může takový převod probíhat i strojově pomocí algoritmů pro rozpoznávání textu, zvuku nebo obrazu, což práci značně ulehčuje.
 
-Strukturovaná data potom mohou být buď v netříděné, nebo ve tříděné podobě. Data v netříděné podobě jsou právě ony záznamy uspořádané do tabulky s řádkem jako pozorováním a sloupcem jako proměnnou, viz tab. 1.1. Data v tříděné podobě z nich vzniknou, když hodnoty jedné proměnné rozdělíme do tříd a spočítáme, kolik pozorování do které třídy padne – např. počet studentů podle kraje, viz tab. 1.2. Jejich analýze se budeme podrobně věnovat při studiu popisných statistik. Souhrnům za skupiny jednotek nebo za období, např. průměrné mzdě podle krajů nebo úhrnu srážek za měsíc, říkáme souhrnně data agregovaná.
+Strukturovaná data potom mohou být buď v netříděné, nebo ve tříděné podobě. Data v netříděné podobě jsou právě ony záznamy uspořádané do tabulky s řádkem jako pozorováním a sloupcem jako proměnnou, viz [tab. 1.1](#tab-1-1). Data v tříděné podobě z nich vzniknou, když hodnoty jedné proměnné rozdělíme do tříd a spočítáme, kolik pozorování do které třídy padne – např. počet studentů podle kraje, viz [tab. 1.2](#tab-1-2). Jejich analýze se budeme podrobně věnovat při studiu popisných statistik. Souhrnům za skupiny jednotek nebo za období, např. průměrné mzdě podle krajů nebo úhrnu srážek za měsíc, říkáme souhrnně data agregovaná.
 
-**Tabulka 1.1** Netříděná data: datová matice studentů prvního ročníku (výřez, $n = 200$). Každý řádek je jedna statistická jednotka (student), každý sloupec jedna proměnná.
+**Tabulka 1.1** Netříděná data: datová matice studentů prvního ročníku (výřez, $n = 200$). Každý řádek je jedna statistická jednotka (student), každý sloupec jedna proměnná. {#tab-1-1}
 
 | ID | Pohlaví | Kraj bydliště | Vzdělání<br>rodičů | Rok<br>narození | Věk | Výška<br>(cm) | Hmotnost<br>(kg) | Počet<br>sourozenců | Výdaje<br>(Kč/měs.) | Spokojenost<br>(1–5) |
 | ---: | :--- | :--- | :---: | :---: | :---: | ---: | ---: | :---: | ---: | :---: |
@@ -27,7 +27,7 @@ Strukturovaná data potom mohou být buď v netříděné, nebo ve tříděné p
 
 <small>Zdroj: datový soubor kurzu (syntetická data vygenerovaná pro výuku), sešit `4ST102-tyden01-grafy.xlsx`, list „5 Studenti“.</small>
 
-**Tabulka 1.2** Tříděná data: počet studentů podle kraje bydliště ($n = 200$). Z datové matice v tab. 1.1 vznikla tříděním hodnot proměnné „Kraj bydliště“.
+**Tabulka 1.2** Tříděná data: počet studentů podle kraje bydliště ($n = 200$). Z datové matice v [tab. 1.1](#tab-1-1) vznikla tříděním hodnot proměnné „Kraj bydliště“. {#tab-1-2}
 
 | Kraj bydliště | Počet studentů | Podíl (%) |
 | :--- | ---: | ---: |
@@ -47,7 +47,7 @@ Strukturovaná data potom mohou být buď v netříděné, nebo ve tříděné p
 | Moravskoslezský kraj | 11 | 5,5 |
 | **Celkem** | **200** | **100,0** |
 
-<small>Zdroj: tab. 1.1, četnosti spočítány z celého souboru 200 studentů.</small>
+<small>Zdroj: [tab. 1.1](#tab-1-1), četnosti spočítány z celého souboru 200 studentů.</small>
 
 Proměnné v datové matici nejsou všechny stejné povahy: u některých lze hodnoty jen rozlišit, u jiných seřadit, u dalších mezi sebou odečítat nebo dělit. Právě to, co hodnoty proměnné umožňují, rozhoduje o tom, jaké výpočty dávají smysl a jaký graf je vhodný. Proměnné lze dělit mnoha způsoby; my se zaměříme na dělení, které budeme v dalších týdnech potřebovat:
 

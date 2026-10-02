@@ -24,6 +24,15 @@ The study texts for **4ST102 Úvod do statistiky** are Czech Markdown files in `
 
   # 2.1 Míry polohy
   ```
+- End each table or figure caption with an anchor, and make every reference to it a link:
+
+  ```md
+  **Tabulka 2.1** Popis tabulky. {#tab-2-1}
+
+  … jak ukazuje [tab. 2.1](#tab-2-1) …
+  ```
+
+  Figures use `{#obr-2-1}` and `[obr. 2.1](#obr-2-1)`. For a table on another page, add the page address: `[tab. 1.1](/4st102/01-od-informace-k-datum#tab-1-1)`.
 - Write maths in LaTeX: `$\bar{x}$` inside a sentence, or on its own lines between `$$` and `$$`.
 - Hide solutions so readers try first:
 
