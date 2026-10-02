@@ -1,0 +1,15 @@
+{
+  "name": "stats-python-course",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "convert": "python scripts/convert_notebooks.py",
+    "dev": "npm run convert && vitepress dev docs",
+    "build": "npm run convert && vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.6.4"
+  }
+}

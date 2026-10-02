@@ -1,0 +1,80 @@
+/*
+ * Site-wide look. Change the brand colours here and the whole site follows.
+ * Full list of variables you can override:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+:root {
+  --vp-c-brand-1: #1f6f5c;
+  --vp-c-brand-2: #2a8a73;
+  --vp-c-brand-3: #35a58a;
+  --vp-c-brand-soft: rgba(42, 138, 115, 0.14);
+
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #1f6f5c 20%, #e0a526);
+}
+
+.dark {
+  --vp-c-brand-1: #5cc7a8;
+  --vp-c-brand-2: #47b394;
+  --vp-c-brand-3: #35a58a;
+  --vp-c-brand-soft: rgba(92, 199, 168, 0.16);
+
+  --vp-button-brand-text: #0d2620;
+  --vp-button-brand-hover-text: #0d2620;
+}
+
+/* Notebook output: pandas tables */
+.vp-doc table.dataframe {
+  display: table;
+  font-size: 0.85em;
+}
+.vp-doc table.dataframe th,
+.vp-doc table.dataframe td {
+  padding: 4px 10px;
+  text-align: right;
+}
+
+/* Notebook output: plots */
+.vp-doc img[src*='_files/'] {
+  max-width: 100%;
+  background: #fff;
+  border-radius: 6px;
+}
+
+/* "Open in Colab" / "Download" buttons under a notebook title */
+.vp-doc .notebook-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 28px;
+}
+.vp-doc .nb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-default-soft);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.vp-doc .nb-btn:hover {
+  border-color: var(--vp-c-brand-1);
+}
+.vp-doc .nb-btn-primary {
+  border-color: transparent;
+  color: var(--vp-button-brand-text);
+  background: var(--vp-button-brand-bg);
+}
+.vp-doc .nb-btn-primary:hover {
+  color: var(--vp-button-brand-hover-text);
+  background: var(--vp-button-brand-hover-bg);
+}
