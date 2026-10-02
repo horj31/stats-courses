@@ -1,11 +1,10 @@
 {
-  "name": "stats-python-course",
+  "name": "stats-courses",
   "private": true,
   "type": "module",
   "scripts": {
-    "convert": "python scripts/convert_notebooks.py",
-    "dev": "npm run convert && vitepress dev docs",
-    "build": "npm run convert && vitepress build docs",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
   "devDependencies": {

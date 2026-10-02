@@ -1,7 +1,5 @@
 {
   "recommendations": [
-    "ms-python.python",
-    "ms-toolsai.jupyter",
     "vue.volar",
     "github.vscode-pull-request-github",
     "github.vscode-github-actions"

@@ -1,6 +1,6 @@
 # Builds the site on every push to main and publishes it to GitHub Pages.
-# Pull requests are built too (without publishing), so a broken notebook or
-# page shows up as a red X on the PR before you merge it.
+# Pull requests are built too (without publishing), so a broken page shows
+# up as a red X on the PR before you merge it.
 name: Build and deploy site
 
 on:
@@ -30,15 +30,8 @@ jobs:
           node-version: 24
           cache: npm
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          npm ci
+        run: npm ci
 
       - name: Read GitHub Pages settings
         id: pages

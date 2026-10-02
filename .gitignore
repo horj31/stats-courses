@@ -229,10 +229,6 @@ docs/.vitepress/dist/
 docs/.vitepress/cache/
 docs/.vitepress/.temp/
 
-# Generated from notebooks/ at build time (never edit by hand)
-docs/python/
-docs/public/notebooks/
-
 # OS / editors
 .DS_Store
 Thumbs.db

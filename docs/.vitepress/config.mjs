@@ -6,8 +6,8 @@ import { fileURLToPath } from 'node:url'
 // ---------------------------------------------------------------------------
 // Site settings — change these first
 // ---------------------------------------------------------------------------
-const SITE_TITLE = 'Statistics & Python'
-const SITE_DESCRIPTION = 'Open course materials for statistics and Python, written with students.'
+const SITE_TITLE = 'Jaroslav Horníček'
+const SITE_DESCRIPTION = 'Studijní materiály ke kurzům statistiky.'
 
 // In GitHub Actions this is filled in automatically ("owner/repo").
 const REPO = process.env.GITHUB_REPOSITORY || ''
@@ -54,7 +54,7 @@ function sidebarFor(folder, label) {
 export default defineConfig({
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
-  lang: 'en',
+  lang: 'cs',
   base: BASE,
   cleanUrls: true,
 
@@ -63,35 +63,62 @@ export default defineConfig({
   },
 
   themeConfig: {
-    nav: [
-      { text: '4ST102', link: '/4st102/' },
-      { text: 'Statistics', link: '/statistics/' },
-      { text: 'Python', link: '/python/' },
-      { text: 'Contribute', link: REPO ? `https://github.com/${REPO}/blob/${BRANCH}/CONTRIBUTING.md` : '/' }
-    ],
+    nav: [{ text: '4ST102', link: '/4st102/' }],
 
     sidebar: {
-      '/4st102/': sidebarFor('4st102', '4ST102 Úvod do statistiky'),
-      '/statistics/': sidebarFor('statistics', 'Statistics e-book'),
-      '/python/': sidebarFor('python', 'Python notebooks')
+      '/4st102/': sidebarFor('4st102', '4ST102 Úvod do statistiky')
     },
 
-    search: { provider: 'local' },
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: { buttonText: 'Hledat', buttonAriaLabel: 'Hledat' },
+          modal: {
+            displayDetails: 'Zobrazit podrobnosti',
+            resetButtonTitle: 'Smazat hledání',
+            backButtonTitle: 'Zavřít hledání',
+            noResultsText: 'Žádné výsledky pro',
+            footer: {
+              selectText: 'otevřít',
+              selectKeyAriaLabel: 'Enter',
+              navigateText: 'pohyb',
+              navigateUpKeyAriaLabel: 'šipka nahoru',
+              navigateDownKeyAriaLabel: 'šipka dolů',
+              closeText: 'zavřít',
+              closeKeyAriaLabel: 'Esc'
+            }
+          }
+        }
+      }
+    },
 
-    outline: { level: [2, 3], label: 'On this page' },
+    outline: { level: [2, 3], label: 'Na této stránce' },
+    docFooter: { prev: 'Předchozí', next: 'Další' },
+    sidebarMenuLabel: 'Nabídka',
+    returnToTopLabel: 'Zpět nahoru',
+    darkModeSwitchLabel: 'Vzhled',
+    lightModeSwitchTitle: 'Přepnout na světlý režim',
+    darkModeSwitchTitle: 'Přepnout na tmavý režim',
+    skipToContentLabel: 'Přejít na obsah',
+    notFound: {
+      title: 'STRÁNKA NENALEZENA',
+      quote: 'Tato stránka neexistuje nebo byla přesunuta.',
+      linkLabel: 'přejít na úvodní stránku',
+      linkText: 'Zpět na úvod'
+    },
 
     ...(REPO && {
       socialLinks: [{ icon: 'github', link: `https://github.com/${REPO}` }],
       editLink: {
-        text: 'Suggest a change on GitHub',
-        // Python pages are generated; they link to their notebook instead.
+        text: 'Navrhnout úpravu na GitHubu',
         pattern: `https://github.com/${REPO}/edit/${BRANCH}/docs/:path`
       }
     }),
 
     footer: {
-      message: 'Code: MIT License · Course content: CC BY-SA 4.0',
-      copyright: `© ${new Date().getFullYear()} the course authors and student contributors`
+      message: 'Studijní texty jsou šířeny pod licencí CC BY-SA 4.0.',
+      copyright: `© ${new Date().getFullYear()} Jaroslav Horníček`
     }
   }
 })

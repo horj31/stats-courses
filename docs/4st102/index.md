@@ -9,6 +9,6 @@ Každá kapitola odpovídá jednomu týdnu výuky a navazuje na kapitoly předch
 
 - Kapitolu daného týdne si přečtěte v souvislosti s přednáškou a vraťte se k ní při přípravě na cvičení.
 - Pojmy z prvních týdnů se v dalších kapitolách opakovaně používají – pokud vám něco není jasné, vraťte se o kapitolu zpět.
-- Narazíte na překlep nebo nejasné vysvětlení? Dole na každé stránce je odkaz **Suggest a change on GitHub**.
+- Narazíte na překlep nebo nejasné vysvětlení? Dole na každé stránce je odkaz **Navrhnout úpravu na GitHubu**.
 
-Začněte [kapitolou 1](/4st102/01-od-informace-k-datum), nebo si kapitolu vyberte v postranním panelu (na mobilu v nabídce **Menu**).
+Začněte [kapitolou 1](/4st102/01-od-informace-k-datum), nebo si kapitolu vyberte v postranním panelu (na mobilu pod tlačítkem **Nabídka**).
