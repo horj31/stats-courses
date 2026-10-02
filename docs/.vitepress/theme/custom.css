@@ -24,3 +24,11 @@
   --vp-button-brand-text: #0b2238;
   --vp-button-brand-hover-text: #0b2238;
 }
+
+/* Note about AI at the bottom of every page (see theme/index.js) */
+.ai-note {
+  margin-top: 32px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+}
