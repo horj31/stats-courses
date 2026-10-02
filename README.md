@@ -17,10 +17,19 @@ docs/
 
 Shortcuts below are for Windows and Linux. On a Mac, use **Cmd** instead of **Ctrl**.
 
-## Add a weekly chapter
+## Add a subchapter
 
-1. Create `docs/4st102/02-<short-name>.md`. The number at the start keeps the chapters in order.
-2. Make the first line the chapter title, for example `# 2. Popisné statistiky`. The sidebar picks it up automatically.
+1. Create `docs/4st102/02-<short-name>.md`. Each file is one subchapter; the number at the start keeps them in reading order.
+2. Start it with the chapter it belongs to and its own title. Subchapters with the same `chapter:` are grouped under that chapter in the sidebar automatically:
+
+   ```md
+   ---
+   chapter: 1. Základní pojmy
+   ---
+
+   # 1.2 Typy proměnných
+   ```
+
 3. Commit and push to `main`. The site updates about two minutes later.
 
 ## Add another course

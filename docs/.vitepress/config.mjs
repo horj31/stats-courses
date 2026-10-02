@@ -19,35 +19,47 @@ const BASE = (process.env.BASE_PATH || '').replace(/\/$/, '') + '/'
 // ---------------------------------------------------------------------------
 // Sidebar: built automatically from the files in a folder, sorted by file
 // name (01-..., 02-...). The title is the page's frontmatter `title:` or its
-// first "# Heading". Students never have to edit this file to add a page.
+// first "# Heading". Consecutive pages with the same frontmatter `chapter:`
+// are grouped under that chapter heading. Students never have to edit this
+// file to add a page.
 // ---------------------------------------------------------------------------
 const DOCS = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
-function pageTitle(file) {
+function readPage(file) {
   const text = fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n')
+  let frontmatter = ''
   let body = text
   if (text.startsWith('---\n')) {
     const end = text.indexOf('\n---', 4)
-    const frontmatter = end > 0 ? text.slice(4, end) : ''
-    const title = frontmatter.match(/^title:\s*["']?(.+?)["']?\s*$/m)
-    if (title) return title[1]
-    body = end > 0 ? text.slice(end + 4) : text
+    if (end > 0) {
+      frontmatter = text.slice(4, end)
+      body = text.slice(end + 4)
+    }
   }
+  const field = (key) => frontmatter.match(new RegExp(`^${key}:\\s*["']?(.+?)["']?\\s*$`, 'm'))?.[1]
   const h1 = body.match(/^#\s+(.+)$/m)
-  return h1 ? h1[1].trim() : path.basename(file, '.md')
+  return {
+    title: field('title') || (h1 ? h1[1].trim() : path.basename(file, '.md')),
+    chapter: field('chapter')
+  }
 }
 
 function sidebarFor(folder, label) {
   const dir = path.join(DOCS, folder)
   if (!fs.existsSync(dir)) return []
-  const items = fs
+  const items = []
+  const files = fs
     .readdirSync(dir)
     .filter((f) => f.endsWith('.md') && f !== 'index.md')
     .sort()
-    .map((f) => ({
-      text: pageTitle(path.join(dir, f)),
-      link: `/${folder}/${f.replace(/\.md$/, '')}`
-    }))
+  for (const f of files) {
+    const { title, chapter } = readPage(path.join(dir, f))
+    const page = { text: title, link: `/${folder}/${f.replace(/\.md$/, '')}` }
+    const last = items[items.length - 1]
+    if (!chapter) items.push(page)
+    else if (last?.items && last.text === chapter) last.items.push(page)
+    else items.push({ text: chapter, collapsed: false, items: [page] })
+  }
   return [{ text: label, link: `/${folder}/`, items }]
 }
 

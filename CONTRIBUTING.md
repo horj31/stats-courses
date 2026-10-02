@@ -14,9 +14,16 @@ Your teacher reviews the pull request. Once it's merged, the website updates by 
 
 The study texts for **4ST102 Úvod do statistiky** are Czech Markdown files in `docs/4st102/`, one chapter per teaching week. They are converted from the lecturer's LaTeX sources.
 
-- File names start with the week number so they sort in the right place: `02-popisne-statistiky.md`.
-- The first line is the chapter title: `# 2. Popisné statistiky`. That title appears in the sidebar automatically.
-- Subchapters are numbered second-level headings: `## 2.1 Míry polohy`. They appear in the "Na této stránce" outline on the right.
+- Each file is one subchapter. File names start with a number so they sort in reading order: `02-miry-polohy.md`.
+- Start the file with the name of its chapter, then the subchapter title. Subchapters with the same `chapter:` are grouped under it in the sidebar automatically:
+
+  ```md
+  ---
+  chapter: 2. Popisné statistiky
+  ---
+
+  # 2.1 Míry polohy
+  ```
 - Write maths in LaTeX: `$\bar{x}$` inside a sentence, or on its own lines between `$$` and `$$`.
 - Hide solutions so readers try first:
 
@@ -28,7 +35,7 @@ The study texts for **4ST102 Úvod do statistiky** are Czech Markdown files in `
 
 - Highlight important ideas with `::: tip`, `::: info` or `::: warning` boxes.
 
-Look at `docs/4st102/01-zakladni-pojmy.md` for a complete example.
+Look at `docs/4st102/01-od-informace-k-datum.md` for a complete example.
 
 ## Rules for content
 

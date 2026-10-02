@@ -1,6 +1,8 @@
-# 1. Základní pojmy
+---
+chapter: 1. Základní pojmy
+---
 
-## 1.1 Od nestrukturované informace ke strukturovaným datům
+# 1.1 Od nestrukturované informace ke strukturovaným datům
 
 Informace ve světě kolem nás se často přirozeně vyskytují v nestrukturované podobě – v provozu na křižovatce, v obsahu skříně, v rozhovoru se zákazníkem a vlastně v čemkoliv, co nese nějakou informaci. Jakmile takovou nestrukturovanou informaci zaznamenáme bez dalšího zásahu, např. fotografií, textem nebo zvukovým záznamem, vzniknou tzv. nestrukturovaná data. Pokud ale chceme data analyzovat, je často nutné takovou informaci uspořádat do podoby, kterou lze přímo zpracovat. Ve statistice k tomuto účelu používáme data strukturovaná do tabulek, kde každý řádek je jedna statistická jednotka (pozorování), každý sloupec jedna proměnná (statistický znak) a každá buňka hodnota dané proměnné u dané jednotky. Takové tabulce potom říkáme *datová matice*.
 
