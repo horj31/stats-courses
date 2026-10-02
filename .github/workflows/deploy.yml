@@ -57,10 +57,31 @@ jobs:
     permissions:
       pages: write
       id-token: write
+      actions: read
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # While Settings → Pages → Source is "Deploy from a branch", GitHub also
+      # publishes the raw repository (the README) on every push, and whichever
+      # deployment finishes last is what visitors see. Wait for that build so
+      # this one always lands last. With Source = "GitHub Actions" there is
+      # nothing to wait for and this step ends at once.
+      - name: Wait for GitHub's own Pages build, if any
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 30); do
+            pending=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?head_sha=$GITHUB_SHA&per_page=20" \
+              --jq '[.workflow_runs[] | select(.name == "pages build and deployment" and .status != "completed")] | length')
+            if [ "$pending" = "0" ]; then
+              exit 0
+            fi
+            echo "GitHub's own Pages build is still running, waiting 10 s..."
+            sleep 10
+          done
+          echo "Gave up waiting after 5 minutes, deploying anyway."
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
