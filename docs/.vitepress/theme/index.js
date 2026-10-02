@@ -7,14 +7,17 @@ import './custom.css'
 
 // Shown at the bottom of every page. The site footer can't carry it: VitePress
 // hides the footer on pages with a sidebar.
-const AI_NOTE =
-  'Web byl vytvořen s pomocí Claude AI. Studijní texty jsou autorské, AI pomohla pouze s jejich převodem z LaTeXu do webové podoby.'
+const PAGE_NOTE = `
+  <p>© ${new Date().getFullYear()} Jaroslav Horníček · Studijní texty jsou šířeny pod licencí
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.cs" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</p>
+  <p>Web byl vytvořen s pomocí Claude AI. Studijní texty jsou autorské, AI pomohla pouze s jejich převodem z LaTeXu do webové podoby.</p>
+`
 
 export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'doc-after': () => h('p', { class: 'ai-note' }, AI_NOTE)
+      'doc-after': () => h('div', { class: 'page-note', innerHTML: PAGE_NOTE })
     })
   },
   enhanceApp({ app }) {

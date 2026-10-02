@@ -126,11 +126,6 @@ export default defineConfig({
         text: 'Navrhnout úpravu na GitHubu',
         pattern: `https://github.com/${REPO}/edit/${BRANCH}/docs/:path`
       }
-    }),
-
-    footer: {
-      message: 'Studijní texty jsou šířeny pod licencí CC BY-SA 4.0.',
-      copyright: `© ${new Date().getFullYear()} Jaroslav Horníček`
-    }
+    })
   }
 })

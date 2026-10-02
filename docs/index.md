@@ -9,7 +9,8 @@ next: false
 
 **Jaroslav Horníček**\
 Katedra statistiky a pravděpodobnosti\
-Fakulta informatiky a statistiky, VŠE v Praze
+Fakulta informatiky a statistiky, VŠE v Praze\
+[jaroslav.hornicek@vse.cz](mailto:jaroslav.hornicek@vse.cz)
 
 ## Kurzy
 

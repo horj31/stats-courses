@@ -25,10 +25,18 @@
   --vp-button-brand-hover-text: #0b2238;
 }
 
-/* Note about AI at the bottom of every page (see theme/index.js) */
-.ai-note {
+/* Licence and AI note at the bottom of every page (see theme/index.js) */
+.page-note {
   margin-top: 32px;
   font-size: 13px;
   line-height: 1.6;
   color: var(--vp-c-text-2);
+}
+.page-note p + p {
+  margin-top: 4px;
+}
+.page-note a {
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }

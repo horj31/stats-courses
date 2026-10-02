@@ -2,7 +2,7 @@
 
 Úvod do statistiky je zaměřen především na pochopení základních teoretických konceptů a jejich aplikaci při práci s reálnými daty, při jejichž zpracování si student osvojí dobrou praxi v oblasti analýzy dat, pochopí základní pojmy popisné statistiky a bude schopen vyvarovat se častým chybám při zpracování či vizualizaci dat a při interpretaci výsledků. Kurz seznámí studenta se základy popisné statistiky jak z hlediska stacionárních dat, tak z hlediska časových řad a získané znalosti dá do kontextu s analýzou dat nejen v ekonomické oblasti.
 
-**Vyučující:** Ing. Jakub Danko, PhD., Ph.D., Ing. Jaroslav Horníček\
+**Vyučující:** Ing. Jakub Danko, PhD., Ph.D., Ing. Jaroslav Horníček ([jaroslav.hornicek@vse.cz](mailto:jaroslav.hornicek@vse.cz))\
 **Semestr:** zimní semestr 2026/2027\
 **Sylabus:** sylabus předmětu je k dispozici v InSIS.
 
