@@ -64,12 +64,14 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
+      { text: '4ST102', link: '/4st102/' },
       { text: 'Statistics', link: '/statistics/' },
       { text: 'Python', link: '/python/' },
       { text: 'Contribute', link: REPO ? `https://github.com/${REPO}/blob/${BRANCH}/CONTRIBUTING.md` : '/' }
     ],
 
     sidebar: {
+      '/4st102/': sidebarFor('4st102', '4ST102 Úvod do statistiky'),
       '/statistics/': sidebarFor('statistics', 'Statistics e-book'),
       '/python/': sidebarFor('python', 'Python notebooks')
     },

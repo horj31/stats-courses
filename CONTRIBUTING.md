@@ -29,6 +29,10 @@ Chapters are Markdown files in `docs/statistics/`.
 
 Look at `docs/statistics/01-descriptive-statistics.md` for a complete example.
 
+## 4ST102 Úvod do statistiky (Czech)
+
+The course **4ST102 Úvod do statistiky** has its own study texts in Czech in `docs/4st102/`, one chapter per teaching week. They follow the same conventions as the statistics chapters above: numbered file names (`02-popisne-statistiky.md`), a first line `# 2. Title`, and LaTeX maths. The chapters are converted from the lecturer's LaTeX sources; fixes to existing chapters are welcome through **Suggest a change on GitHub**.
+
 ## Adding a Python notebook
 
 Notebooks live in `notebooks/` and become web pages automatically.
