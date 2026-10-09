@@ -20,8 +20,11 @@ const BASE = (process.env.BASE_PATH || '').replace(/\/$/, '') + '/'
 // Sidebar: built automatically from the files in a folder, sorted by file
 // name (01-..., 02-...). The title is the page's frontmatter `title:` or its
 // first "# Heading". Consecutive pages with the same frontmatter `chapter:`
-// are grouped under that chapter heading. Students never have to edit this
-// file to add a page.
+// are grouped under that chapter heading. A page whose title equals its
+// `chapter:` (e.g. "# 2. Zdroje dat" in 02-0-zdroje-dat.md) is the chapter's
+// intro: the chapter heading links to it instead of listing it as a
+// subchapter (and a chapter that has only an intro page is a plain link).
+// Students never have to edit this file to add a page.
 // ---------------------------------------------------------------------------
 const DOCS = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -56,11 +59,21 @@ function sidebarFor(folder, label) {
     const { title, chapter } = readPage(path.join(dir, f))
     const page = { text: title, link: `/${folder}/${f.replace(/\.md$/, '')}` }
     const last = items[items.length - 1]
-    if (!chapter) items.push(page)
-    else if (last?.items && last.text === chapter) last.items.push(page)
-    else items.push({ text: chapter, collapsed: false, items: [page] })
+    if (!chapter) {
+      items.push(page)
+      continue
+    }
+    let group = last?.items && last.text === chapter ? last : null
+    if (!group) {
+      group = { text: chapter, collapsed: false, items: [] }
+      items.push(group)
+    }
+    if (title === chapter) group.link = page.link
+    else group.items.push(page)
   }
-  return [{ text: label, link: `/${folder}/`, items }]
+  // A chapter with an intro page and no subchapters (yet) is a plain link.
+  const flat = items.map((g) => (g.items && g.items.length === 0 && g.link ? { text: g.text, link: g.link } : g))
+  return [{ text: label, link: `/${folder}/`, items: flat }]
 }
 
 export default defineConfig({
