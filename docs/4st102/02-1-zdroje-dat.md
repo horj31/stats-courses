@@ -1,5 +1,5 @@
 ---
-chapter: 2. Zdroje dat
+chapter: 2. Jak získat kvalitní data
 ---
 
 # 2.1 Zdroje dat

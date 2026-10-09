@@ -1,8 +1,8 @@
 ---
-chapter: 2. Zdroje dat
+chapter: 2. Jak získat kvalitní data
 ---
 
-# 2. Zdroje dat
+# 2. Jak získat kvalitní data
 
 Pokud chceme provést kvalitní datovou analýzu zvoleného problému, nejde jen o volbu vhodné statistické metody, ale o celý proces, který se skládá z několika kroků:
 

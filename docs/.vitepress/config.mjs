@@ -21,7 +21,7 @@ const BASE = (process.env.BASE_PATH || '').replace(/\/$/, '') + '/'
 // name (01-..., 02-...). The title is the page's frontmatter `title:` or its
 // first "# Heading". Consecutive pages with the same frontmatter `chapter:`
 // are grouped under that chapter heading. A page whose title equals its
-// `chapter:` (e.g. "# 2. Zdroje dat" in 02-0-zdroje-dat.md) is the chapter's
+// `chapter:` (e.g. "# 2. Jak získat kvalitní data" in 02-0-jak-ziskat-kvalitni-data.md) is the chapter's
 // intro: the chapter heading links to it instead of listing it as a
 // subchapter (and a chapter that has only an intro page is a plain link).
 // Students never have to edit this file to add a page.
