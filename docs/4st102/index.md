@@ -8,9 +8,9 @@
 
 ## Studijní texty
 
-Každá kapitola odpovídá jednomu týdnu výuky a navazuje na kapitoly předchozí, proto je čtěte postupně.
+Kapitoly sledují pořadí přednášek a navazují na sebe, proto je čtěte postupně.
 
-- Kapitolu daného týdne si přečtěte v souvislosti s přednáškou a vraťte se k ní při přípravě na cvičení.
+- Kapitolu k právě probírané látce si přečtěte v souvislosti s přednáškou a vraťte se k ní při přípravě na cvičení.
 - Pojmy z prvních týdnů se v dalších kapitolách opakovaně používají – pokud vám něco není jasné, vraťte se o kapitolu zpět.
 - Narazíte na překlep nebo nejasné vysvětlení? Dole na každé stránce je odkaz **Navrhnout úpravu na GitHubu**.
 
