@@ -14,13 +14,13 @@ $$R = x_{\max} - x_{\min}, \qquad IQR = Q_3 - Q_1$$
 
 ## Rozptyl a směrodatná odchylka
 
-$$s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2, \qquad s = \sqrt{s^2}$$
+$$s^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2, \qquad s = \sqrt{s^2}$$
 
-**Rozptyl** měří velikost čtvercových odchylek hodnot od aritmetického průměru a vychází ve čtvercových jednotkách. **Směrodatná odchylka** je jeho odmocnina v původních jednotkách proměnné. Dělení $n - 1$ dává výběrový rozptyl, který se používá, chápeme-li data jako výběr z větší populace; dělení $n$ dává populační rozptyl $s_n^2 = \frac{1}{n}\sum (x_i - \bar{x})^2$.
+**Rozptyl** je průměr čtvercových odchylek hodnot od aritmetického průměru a vychází ve čtvercových jednotkách. **Směrodatná odchylka** je jeho odmocnina v původních jednotkách proměnné.
 
 Pro tříděná data se středy intervalů $x_i$ a četnostmi $n_i$ platí
 
-$$s^2 = \frac{\sum_{i=1}^{k} n_i (x_i - \bar{x})^2}{n - 1},$$
+$$s^2 = \frac{\sum_{i=1}^{k} n_i (x_i - \bar{x})^2}{n},$$
 
 kde $\bar{x}$ je vážený aritmetický průměr.
 

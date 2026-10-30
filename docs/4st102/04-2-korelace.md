@@ -8,7 +8,7 @@ U dvou kvantitativních proměnných měříme závislost pomocí kovariance a k
 
 ## Kovariance
 
-$$s_{xy} = \frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})$$
+$$s_{xy} = \frac{1}{n}\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})$$
 
 Kladná kovariance znamená, že nadprůměrné hodnoty jedné proměnné se obvykle pojí s nadprůměrnými hodnotami druhé; záporná kovariance opak. Velikost kovariance závisí na jednotkách obou proměnných, a proto se k posouzení síly závislosti nepoužívá.
 
